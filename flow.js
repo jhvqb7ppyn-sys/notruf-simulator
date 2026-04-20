@@ -1,41 +1,34 @@
-const flow = {
-  start: {
-    text: "Notruf, wo genau ist der Notfallort?",
-    next: "situation"
-  },
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Notruf Simulation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  situation: {
-    text: "Was ist passiert?",
-    next: "bewusstsein"
-  },
+<div class="app">
+  <h1>🚨 Notruf Simulation</h1>
 
-  bewusstsein: {
-    text: "Ist die Person wach?",
-    options: {
-      "Ja": "ende",
-      "Nein": "atmung"
-    }
-  },
+  <!-- CHAT -->
+  <div id="chat"></div>
 
-  atmung: {
-    text: "Atmet die Person normal?",
-    options: {
-      "Ja": "stabile_lage",
-      "Nein": "reanimation"
-    }
-  },
+  <!-- BUTTONS -->
+  <div id="answers"></div>
 
-  stabile_lage: {
-    text: "Bitte bringen Sie die Person in stabile Seitenlage.",
-    next: "ende"
-  },
+  <!-- 👉 INPUT FELD (DAS FEHLT BEI DIR) -->
+  <div class="input-area">
+    <input type="text" id="userInput" placeholder="Antwort eingeben...">
+    <button onclick="sendText()">Senden</button>
+  </div>
 
-  reanimation: {
-    text: "Beginnen Sie sofort mit der Herzdruckmassage!",
-    next: "ende"
-  },
+  <!-- PDF BUTTON -->
+  <button id="exportBtn" onclick="exportPDF()">📄 Gespräch als PDF</button>
+</div>
 
-  ende: {
-    text: "Der Rettungsdienst ist unterwegs."
-  }
-};
+<!-- SCRIPTS GANZ UNTEN -->
+<script src="flow.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
