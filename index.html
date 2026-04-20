@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <title>Notruf Simulation</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<div id="chat"></div>
 
-<div class="app">
-  <h1>🚨 Notruf Simulation</h1>
+<div id="answers"></div>
 
-  <div id="chat"></div>
-  <div id="answers"></div>
+<div class="input-area">
+  <input type="text" id="userInput" placeholder="Antwort eingeben...">
+  <button onclick="sendText()">Senden</button>
 </div>
 
-<script src="flow.js"></script>
-<script src="app.js"></script>
-</body>
-</html>
+<button id="exportBtn" onclick="exportPDF()">📄 Gespräch als PDF</button>
+
+<!-- PDF Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
