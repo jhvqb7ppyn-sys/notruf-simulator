@@ -45,3 +45,30 @@ body {
 button:hover {
   opacity: 0.8;
 }
+.input-area {
+  display: flex;
+  margin-top: 10px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+.input-area button {
+  margin-left: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+#exportBtn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background: #444;
+  color: white;
+}
