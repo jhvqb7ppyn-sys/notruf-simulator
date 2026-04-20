@@ -142,11 +142,6 @@ function exportPDF() {
 }
 
 // Enter-Taste aktivieren
-input.addEventListener("keypress", function(e) {
-  if (e.key === "Enter") {
-    sendText();
-  }
-});
-
-// Start
+input.addEventListener("DOMContentLoaded" , () => {
 showStep();
+});
